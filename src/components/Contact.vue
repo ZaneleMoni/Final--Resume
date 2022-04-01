@@ -108,7 +108,7 @@ export default {
       this.email = "";
       this.message = "";
 
-      fetch("http://localhost:8000/contact", {
+      fetch("https://portfolio-project-testimonial.herokuapp.com/contact", {
         method: "POST",
         body: JSON.stringify({
           name: this.name,
@@ -120,7 +120,9 @@ export default {
         },
       })
         .then((response) => response.json())
-        .then((json) => console.log(json))
+        .then((json) => {
+          
+        })
         .catch((e) => alert(e.msg));
     },
   },

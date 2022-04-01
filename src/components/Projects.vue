@@ -51,6 +51,8 @@ h1 {
   display: flex;
   margin-left: 40%;
   padding: 50px;
+  float:left;
+	width:33.33333%;
 }
 img {
   align-content: center;
@@ -65,6 +67,7 @@ img {
   width: 100%;
   height: 100%;
   padding: 2.5rem 2.5rem 1.5rem;
+  
 }
 .links{
   display:flex;

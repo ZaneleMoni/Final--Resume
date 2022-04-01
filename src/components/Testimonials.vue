@@ -1,27 +1,38 @@
 <template>
-  <div id="testimonials">
+<section id="">
+<div id="testimonials" class="test p-5">
     <h1>Testimonials</h1>
-    <section id="testimonial">
-
-      <div class="card-group" v-if="testimonials">
-  <div class="card" v-for="testimonial of testimonials"
+  <div class="container mt-5 mb-5 p-5">
+    <div class="row g-2">
+        <div class="col-md">
+        <div class="card-group1" v-if="testimonials">
+     <div class="card p-3 text-center px-6" v-for="testimonial of testimonials"
           :key="testimonial.id">
-    <img :src="testimonial.img" class="photo" alt="image"/>
-    <div class="card-body">
-      <h5 class="card-title">{{ testimonial.fname }} {{ testimonial.lname }}</h5>
-      <p class="card-text">{{ testimonial.text }}</p>
-      <p class="card-text"><small class="text-muted">{{ testimonial.status }}</small></p>
+   <div class="user-image"> <img :src="testimonial.img" class="rounded-circle" width="80"> </div>
+       <div class="user-content">
+         <h5 class="mb-8">{{ testimonial.fname }} {{ testimonial.lname }}</h5> <span>{{ testimonial.status }}</span>
+                    <p>{{ testimonial.text }}</p>
+                </div>
+                <div class="ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-    </section>
   </div>
+  </div>
+
+</section>
+
+  
 </template>
 
 <script>
 import App from "../App.vue";
+import testimonials from "../assets/js/testimonials"
 export default {
+  components:{
+    testimonials
+  },
   data() {
     return {
       testimonials: null,
@@ -42,44 +53,29 @@ export default {
 </script>
 
 <style scoped>
-p {
-  font-family: normal;
-  font-size: 12px;
+
+.card-group1{
+ gap:2rem;
+ float:left;
+	width:33.33333%;
+ 
+    
 }
 
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-direction: row;
-  margin: 2rem 0;
-}
-h1 {
-  display: flex;
-  margin-left: 30%;
-  font-family: normal;
-  padding: 81px;
+.container{
+  padding: 20px;
 }
 
-  img {
-  border-radius: 50%;
-  margin: 15px auto 0;
-  box-shadow: 0 8px 20px -4px #e02cd1;
-  width: 100px;
-  height: 100px;
+.card {
+    border: none;   
 }
 
+.user-content p {
+    margin-top: 5px;
+    font-size: 12px
+}
 
-
-
-@media screen and (min-width: 300px) {
-  .card-img-top {
-    flex-direction: column;
-  }
-  .card {
-    display: flex;
-  }
+.ratings i {
+    color: blue
 }
 </style>

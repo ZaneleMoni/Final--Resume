@@ -1,6 +1,6 @@
-<template>
-<section id="res">
-  <div id="resume">
+<template> 
+<section id="res" >
+  <div id="resume" class="resume p-5">
     <h1>Resume</h1>
     <div class="underline"></div>
 
@@ -24,14 +24,13 @@
       <li>
         <div class="direction-l">
           <div class="flag-wrapper">
-            <span class="flag">Nomaphelo's braids </span>
+            <span class="flag">College Of Cape Town</span>
             <span class="time-wrapper"
-              ><span class="time">January2018 - 29 August 2021</span></span
+              ><span class="time">January 2016-December 2018</span></span
             >
           </div>
           <div class="desc">
-            worked for my sister in her salon, was specialising in braids and
-            cornrows
+            did an IT course at College of Cape Town
           </div>
         </div>
       </li>
@@ -40,12 +39,27 @@
       <li>
         <div class="direction-r">
           <div class="flag-wrapper">
-            <span class="flag">LifeChoices</span>
+            <span class="flag">Nomaphelo's braids </span>
             <span class="time-wrapper"
-              ><span class="time">September 2021</span></span
+              ><span class="time">January2018 - 29 August 2021</span></span
             >
           </div>
-          <div class="desc">started coding bootcamp at LifeChoices</div>
+          <div class="desc">worked for my sister in her salon, was specialising in braids and
+            cornrows</div>
+        </div>
+      </li>
+      <li>
+        <div class="direction-l">
+          <div class="flag-wrapper">
+            <span class="flag"> Life Choices</span>
+            <span class="time-wrapper"
+              ><span class="time">September 2021-March 2022</span></span
+            >
+          </div>
+          <div class="desc">
+            
+            started coding bootcamp at LifeChoices
+          </div>
         </div>
       </li>
     </ul>
@@ -61,12 +75,7 @@ export default {};
 
 /* ================ The Timeline ================ */
 
-h1 {
-  font-family: normal;
-  display: flex;
-  margin-left: 20%;
-  padding: 71px;
-}
+
 
 .timeline {
   position: relative;
